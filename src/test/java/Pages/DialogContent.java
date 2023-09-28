@@ -12,6 +12,7 @@ public class DialogContent extends Parent {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
+    // Senol
     @FindBy(xpath = "//a[@title='Log in to your customer account']")
     public WebElement signInButton;
     @FindBy(xpath = "//input[@id='email']")
@@ -52,6 +53,43 @@ public class DialogContent extends Parent {
     public WebElement succesMessage;
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // Malik
     @FindBy(xpath = "//input[@id='email_create']")
     public WebElement emailCreate;
     @FindBy(xpath = "//*[@id='SubmitCreate']")
@@ -72,6 +110,124 @@ public class DialogContent extends Parent {
     public WebElement registerbtn;
     @FindBy(css = "[class='alert alert-success']")
     public WebElement registerSuccesMsg;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // Murat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // Tuba
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // Emre
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
