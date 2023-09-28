@@ -16,7 +16,7 @@ public class GWD {
         if (driver==null) {
             driver = new ChromeDriver();
             driver.manage().window().maximize();
-            driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20)); // 20 sn mühlet: sayfayı yükleme mühlet
+            driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(50)); // 20 sn mühlet: sayfayı yükleme mühlet
         }
         return driver;
     }
