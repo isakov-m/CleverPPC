@@ -52,6 +52,31 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//p//strong[@class='dark']")
     public WebElement succesMessage;
 
+    @FindBy (xpath = "(//ul/li)[12]")
+    public WebElement DressesLink;
+
+    @FindBy (xpath = "//span[text()='Add to cart']")
+    public WebElement addToCartButton;
+
+    @FindBy (xpath = "//span[@title='Continue shopping']")
+    public WebElement continueShoppingButton;
+
+
+    @FindBy (xpath = "//a[@class='product-name']")
+    public List<WebElement> PRODUCTS;
+
+    @FindBy (xpath = "(//ul[@id='product_list']/li)[1]")
+    public WebElement dress1;
+    @FindBy (xpath = "(//ul[@id='product_list']/li)[2]")
+    public WebElement dress2;
+    @FindBy (xpath = "(//ul[@id='product_list']/li)[3]")
+    public WebElement dress3;
+    @FindBy (xpath = "(//ul[@id='product_list']/li)[4]")
+    public WebElement dress4;
+    @FindBy (xpath = "(//ul[@id='product_list']/li)[5]")
+    public WebElement dress5;
+
+
 
 
 
