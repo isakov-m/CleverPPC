@@ -141,6 +141,18 @@ public class DialogContent extends Parent {
                 return this.selectState;
             case "saveButton":
                 return this.saveButton;
+            case "DressesLink" :
+                return this.DressesLink;
+            case "PRODUCTS" :
+                return (WebElement) this.PRODUCTS;
+            case "addToCartButton" :
+                return this.addToCartButton;
+            case "continueShoppingButton" :
+                return this.continueShoppingButton;
+            case "shoppingCart" :
+                return this.shoppingCart;
+            case "AddToCartElements" :
+                return (WebElement) this.AddToCartElements;
 
 
         }
