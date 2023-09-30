@@ -25,7 +25,6 @@ public class DialogContent extends Parent {
     public WebElement txtCart;
     @FindBy(xpath = "//a[@title='Sitemap']")
     public WebElement siteMapLink;
-
     @FindBy(xpath = "//a[@title='View a list of my addresses']")
     public WebElement addressesLink;
     @FindBy(xpath = "(//div[@class]/a)[8]")
@@ -48,26 +47,20 @@ public class DialogContent extends Parent {
     public WebElement selectState;
     @FindBy(xpath = " //button[@id='submitAddress']")
     public WebElement saveButton;
-
     @FindBy(xpath = "//p//strong[@class='dark']")
     public WebElement succesMessage;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy(xpath = "(//ul/li)[12]")
+    public WebElement DressesLink;
+    @FindBy(xpath = "//span[text()='Add to cart']")
+    public WebElement addToCartButton;
+    @FindBy(xpath = "//span[@title='Continue shopping']")
+    public WebElement continueShoppingButton;
+    @FindBy(xpath = "//a[@class='product-name']")
+    public List<WebElement> PRODUCTS;
+    @FindBy (xpath = "//div[@class='shopping_cart']/a")
+    public WebElement shoppingCart;
+    @FindBy (xpath = "  //span[@class='quantity']")
+    public List<WebElement> AddToCartElements;
 
 
 
@@ -112,149 +105,46 @@ public class DialogContent extends Parent {
     public WebElement registerSuccesMsg;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     // Murat
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     // Tuba
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     // Emre
 
 
+    public WebElement getWebelement(String strElement) {
+
+        switch (strElement) {
+            case "siteMapLink":
+                return this.siteMapLink;
+            case "addressesLink":
+                return this.addressesLink;
+            case "addNewAdressBtn":
+                return this.addNewAdressBtn;
+            case "state":
+                return this.state;
+            case "addressInput":
+                return this.addressInput;
+            case "cityInput":
+                return this.cityInput;
+            case "postCodeInput":
+                return this.postCodeInput;
+            case "homePhoneInput":
+                return this.homePhoneInput;
+            case "mobilePhoneInput":
+                return this.mobilePhoneInput;
+            case "informationInput":
+                return this.informationInput;
+            case "selectState":
+                return this.selectState;
+            case "saveButton":
+                return this.saveButton;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public WebElement getWebelement(String strElement){
-
-        switch (strElement){
-        case "siteMapLink" : return this.siteMapLink;
-        case "addressesLink" : return this.addressesLink;
-        case "addNewAdressBtn" : return this.addNewAdressBtn;
-        case "state" : return this.state;
-        case "addressInput" : return this.addressInput;
-        case "cityInput" : return this.cityInput ;
-        case "postCodeInput" : return this.postCodeInput;
-        case "homePhoneInput" : return this.homePhoneInput;
-        case "mobilePhoneInput" : return this.mobilePhoneInput;
-        case "informationInput" : return this.informationInput;
-        case "selectState" : return this.selectState;
-        case "saveButton" : return this.saveButton;
-
+        }
+        return null;
 
     }
-    return  null;
-
-}
 }
