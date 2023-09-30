@@ -65,6 +65,23 @@ public class DialogContent extends Parent {
 
 
 
+    // Murat ---> AddToCart : Sepete ürün ekleme
+
+    @FindBy(xpath = "//a[@title='Women']")
+    public WebElement Women;
+
+    @FindBy(xpath = "(//*[@title='Summer Dresses'])[1]")
+    public WebElement summerDresses;
+
+    @FindBy(xpath = "//a[@class='product-name']")
+    public List<WebElement> YazÜrünleri;
+
+    @FindBy(css = "[class='exclusive']")
+    public WebElement addToCardBtn;
+
+    @FindBy(xpath = "(//span[@class='title'])[1]")
+    public WebElement dogrulamaMesaji;
+
 
 
 
