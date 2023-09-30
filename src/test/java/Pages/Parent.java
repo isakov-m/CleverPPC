@@ -11,6 +11,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Parent {
@@ -71,6 +73,18 @@ public class Parent {
         action.perform();
     }
 
+    public void BackPage() {  //sayfayi bir önceki sayfaya götürür
+
+        GWD.getDriver().navigate().back();
+    }
+
+    public void savedElement(WebElement element) {  //bir elementi list e atar, getText ini alir ve yazdirir
+        wait.until(ExpectedConditions.visibilityOf(element));
+        List<String> savedElement = new ArrayList<>();
+        String save = element.getText();
+        savedElement.add(save);
+        System.out.println("SavedElement = " + savedElement);
+    }
 
 
 }
