@@ -3,6 +3,8 @@ package Pages;
 import Utilities.GWD;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -10,10 +12,11 @@ import org.testng.Assert;
 
 import java.time.Duration;
 
-public class Parent {
-    public WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(20));
 
-    public void myClick(WebElement element){
+public class Parent {
+    public WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(20));
+
+    public void myClick(WebElement element) {
 
         wait.until(ExpectedConditions.elementToBeClickable(element));
         scrollToElemenet(element);
@@ -21,19 +24,21 @@ public class Parent {
 
     }
 
-    public void mySendkeys(WebElement element, String text){
+    public void mySendkeys(WebElement element, String text) {
         wait.until(ExpectedConditions.visibilityOf(element));
         element.clear();
         scrollToElemenet(element);
         element.sendKeys(text);
 
     }
-    public void scrollToElemenet(WebElement element){
 
-        JavascriptExecutor js=(JavascriptExecutor)GWD.getDriver();
+    public void scrollToElemenet(WebElement element) { //islem yapilacak elemente kaydirir sayfayi
+
+        JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
         js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
-    public void clickToElemenet(WebElement element){
+
+    public void clickToElemenet(WebElement element) {  //normal myClick metodu calismadigi durumlarda kullanilarbilir
 
         JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
 
@@ -42,21 +47,30 @@ public class Parent {
         js.executeScript("arguments[0].click();", element);
     }
 
-    public void veifyContainsText(WebElement element,String value){
+    public void veifyContainsText(WebElement element, String value) {
         wait.until(ExpectedConditions.textToBePresentInElement(element, value));
         Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()));
 
 
-
     }
 
-    public void mySelect(WebElement element,int index){
-
-        scrollToElemenet(element);
-        Select nesneSelect=new Select(element);
+    public void mySelect(WebElement element, int index) { //select element secme Metodu -->selectByIndex<-- yerine
+        scrollToElemenet(element);                        // selectByValue veya text  kullanilabilir
+        Select nesneSelect = new Select(element);
         nesneSelect.selectByIndex(index);
 
     }
+
+    public static int randomSecim(int limit) { // Random secim Metodu
+        return (int) (Math.random() * limit);
+    }
+
+    public void Hover(WebElement element) { //Acilir alt menüsü olan elementin üzerine gitme Metodu
+        Actions actions = new Actions(GWD.getDriver());
+        Action action = actions.moveToElement(element).build();
+        action.perform();
+    }
+
 
 
 }

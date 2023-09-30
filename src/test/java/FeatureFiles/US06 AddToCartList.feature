@@ -13,6 +13,12 @@ Feature: DataTable Functionality
       | addToCartButton        |
       | continueShoppingButton |
       | DressesLink            |
+    And Verify your Shopping elements ind Add to Cart
+      | shoppingCart      |
+      | AddToCartElements |
+
+
+
 
 
 
