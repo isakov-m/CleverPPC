@@ -56,10 +56,17 @@ public class Parent {
 
     }
 
-    public void mySelect(WebElement element, int index) { //select element secme Metodu -->selectByIndex<-- yerine
+    public void mySelectIndex(WebElement element, int index) { //select element secme Metodu -->selectByIndex<-- yerine
         scrollToElemenet(element);                        // selectByValue veya text  kullanilabilir
         Select nesneSelect = new Select(element);
         nesneSelect.selectByIndex(index);
+
+    }
+
+    public void mySelectValue(WebElement element, String value) { //select element secme Metodu -->selectByIndex<-- yerine
+        scrollToElemenet(element);                        // selectByValue veya text  kullanilabilir
+        Select nesneSelect = new Select(element);
+        nesneSelect.selectByValue(value);
 
     }
 

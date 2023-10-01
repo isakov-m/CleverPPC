@@ -80,11 +80,25 @@ public class DialogContent extends Parent {
     @FindBy (xpath = "//button[@class='button btn btn-default button-medium']")
     public WebElement confirmButton;
     @FindBy (xpath = "//p[@class='alert alert-success']")
-    public WebElement shoppingFinishMessage;
+    public WebElement successMessage;
     @FindBy (xpath = "//p[@class='cart_navigation exclusive']/a")
     public WebElement orderHistory;
     @FindBy (xpath = "(//td[@class='history_link bold footable-first-column']/a)[1]")
     public WebElement orderNumber;
+    @FindBy (xpath = "//a[text()='Contact us']")
+    public WebElement contactUsButton;
+    @FindBy (xpath = "//select[@id='id_contact']")
+    public WebElement selectCustomerService;
+    @FindBy (xpath = "//select[@name='id_order']")
+    public WebElement selectOrderNumber;
+    @FindBy (xpath = "//select[@name='id_product']")
+    public WebElement selectProduct;
+    @FindBy (xpath = "//textarea[@id='message']")
+    public WebElement textInput;
+    @FindBy (xpath = "//div[@id='uniform-fileUpload']")
+    public WebElement chooseFileButton;
+    @FindBy (xpath = "//button[@id='submitMessage']")
+    public WebElement sendButton;
 
 
 
@@ -214,11 +228,27 @@ public class DialogContent extends Parent {
             case "confirmButton" :
                 return this.confirmButton;
             case "shoppingFinishMessage" :
-                return this.shoppingFinishMessage;
+                return this.successMessage;
             case "orderHistory" :
                 return this.orderHistory;
             case "orderNumber" :
                 return this.orderNumber;
+            case "contactUsButton" :
+                return this.contactUsButton;
+            case "selectCustomerService" :
+                return this.selectCustomerService;
+            case "selectOrderNumber" :
+                return this.selectOrderNumber;
+            case "selectProduct" :
+                return this.selectProduct;
+            case "emailInput" :
+                return this.emailInput;
+            case "textInput" :
+                return this.textInput;
+            case "chooseFileButton" :
+                return this.chooseFileButton;
+            case "sendButton" :
+                return this.sendButton;
 
 
         }
