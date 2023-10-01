@@ -31,4 +31,19 @@ public class LoginSteps {
     public void userShouldBeLoginSuccessfully() {
         dc.veifyContainsText(dc.txtCart, "Cart");
     }
+
+    @When("Enter your <email> and <password> and click sign in button")
+    public void enterYourEmailAndPasswordAndClickSignInButton(String email,String password) {
+        dc.mySendkeys(dc.emailInput, email);
+        dc.mySendkeys(dc.passwordInput,password);
+        dc.myClick(dc.logInButton);
+    }
+
+
+    @When("Enter fail your email and password and click sign in button")
+    public void enterFailYourEmailAndPasswordAndClickSignInButton() {
+        dc.mySendkeys(dc.emailInput, "abcc123@gmail.com");
+        dc.mySendkeys(dc.passwordInput, "123456");
+        dc.myClick(dc.logInButton);
+    }
 }
