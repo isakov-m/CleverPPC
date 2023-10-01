@@ -18,7 +18,7 @@ public class US06_AddToCartListSteps {
     Map<Integer, WebElement> selectedProducts = new HashMap<>();
 
     @Then("Element Random Click in Dialog")
-    public void elementRandomClickInDialog(DataTable linkler) {
+    public void elementRandomClickInDialog() { //calistirmak istersen metoda DataTable ekle
 
 
         dc.myClick(dc.DressesLink);
@@ -47,7 +47,7 @@ public class US06_AddToCartListSteps {
 
 
     @And("Verify your Shopping elements ind Add to Cart")
-    public void verifyYourShoppingElementsIndAddToCart(DataTable verify) {
+    public void verifyYourShoppingElementsIndAddToCart() { //calistirmak istersen metoda DataTable ekle
         dc.Hover(dc.shoppingCart);
         Assert.assertEquals(selectedProducts.size(), dc.AddToCartElements.size());
 

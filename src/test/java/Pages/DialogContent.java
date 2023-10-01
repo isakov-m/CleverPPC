@@ -61,6 +61,31 @@ public class DialogContent extends Parent {
     public WebElement shoppingCart;
     @FindBy (xpath = "  //span[@class='quantity']")
     public List<WebElement> AddToCartElements;
+    @FindBy (xpath = "(//*[ contains( text(), 'Proceed' )  ])[2]")
+    public WebElement proceedCheckoutButton;
+    @FindBy (xpath = " //div//label")
+    public WebElement IAgree;
+    @FindBy (xpath = "//input[@id='paypal-standard-btn']")
+    public WebElement paypalButton;
+    @FindBy (xpath = "//div[@class='message']")
+    public WebElement paypalMessage;
+    @FindBy (xpath = "(//p[@class='payment_module'])[3]")
+    public WebElement creditCardButton;
+    @FindBy (xpath = "//body[text()='Invalid request (1).']")
+    public WebElement creditCardMessage;
+    @FindBy (xpath = " (//p[@class='payment_module'])[1]")
+    public WebElement bankWireButton;
+    @FindBy (xpath = "//span[@id='amount' and @class='price']")
+    public WebElement totalPrice;
+    @FindBy (xpath = "//button[@class='button btn btn-default button-medium']")
+    public WebElement confirmButton;
+    @FindBy (xpath = "//p[@class='alert alert-success']")
+    public WebElement shoppingFinishMessage;
+    @FindBy (xpath = "//p[@class='cart_navigation exclusive']/a")
+    public WebElement orderHistory;
+    @FindBy (xpath = "(//td[@class='history_link bold footable-first-column']/a)[1]")
+    public WebElement orderNumber;
+
 
 
 
@@ -158,6 +183,42 @@ public class DialogContent extends Parent {
                 return this.selectState;
             case "saveButton":
                 return this.saveButton;
+            case "DressesLink" :
+                return this.DressesLink;
+            case "PRODUCTS" :
+                return (WebElement) this.PRODUCTS;
+            case "addToCartButton" :
+                return this.addToCartButton;
+            case "continueShoppingButton" :
+                return this.continueShoppingButton;
+            case "shoppingCart" :
+                return this.shoppingCart;
+            case "AddToCartElements" :
+                return (WebElement) this.AddToCartElements;
+            case "proceedCheckoutButton" :
+                return this.proceedCheckoutButton;
+            case "IAgree" :
+                return this.IAgree;
+            case "paypalButton" :
+                return this.paypalButton;
+            case "paypalMessage" :
+                return this.paypalMessage;
+            case "creditCardButton" :
+                return this.creditCardButton;
+            case "creditCardMessage" :
+                return this.creditCardMessage;
+            case "bankWireButton" :
+                return this.bankWireButton;
+            case "totalPrice" :
+                return this.totalPrice;
+            case "confirmButton" :
+                return this.confirmButton;
+            case "shoppingFinishMessage" :
+                return this.shoppingFinishMessage;
+            case "orderHistory" :
+                return this.orderHistory;
+            case "orderNumber" :
+                return this.orderNumber;
 
 
         }
