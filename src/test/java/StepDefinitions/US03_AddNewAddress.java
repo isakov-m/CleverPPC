@@ -23,7 +23,7 @@ public class US03_AddNewAddress {
     public void clikToSelectAdressInfromations() {
        // dc.mySelect(dc.state, "Florida");
         //dc.myClick(dc.selectState);
-        dc.mySelect(dc.state, 4);
+        dc.mySelectIndex(dc.state, 4);
     }
 
     @And("And Send Keys")

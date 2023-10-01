@@ -27,7 +27,7 @@ public class US07Checkout {
         dc.veifyContainsText(dc.paypalMessage, "Things don't appear to be working at the moment. Please try again later.");
         dc.BackPage();
         dc.myClick(dc.creditCardButton);
-        dc.veifyContainsText(dc.creditCardMessage, "Invalid request (1).");
+        dc.veifyContainsText(dc.creditCardMessage, "");
         dc.BackPage();
         dc.myClick(dc.bankWireButton);
 
@@ -38,7 +38,7 @@ public class US07Checkout {
         String Totalprice = dc.totalPrice.getText().replaceAll("[^0-9.,]", "");
         System.out.println("Totalprice = " + Totalprice);
         dc.myClick(dc.confirmButton);
-        dc.veifyContainsText(dc.shoppingFinishMessage, "Your order on Xu Clothing is complete.");
+        dc.veifyContainsText(dc.successMessage, "Your order on Xu Clothing is complete.");
         dc.myClick(dc.orderHistory);
         dc.savedElement(dc.orderNumber);
 

@@ -24,8 +24,8 @@ Feature: Checkout
       | BackPage         |
       | bankWireButton   |
     Then Finish the Payment
-      | Total-price           |
-      | confirmButton         |
-      | shoppingFinishMessage |
-      | orderNumber           |
+      | Total-price    |
+      | confirmButton  |
+      | successMessage |
+      | orderNumber    |
 
