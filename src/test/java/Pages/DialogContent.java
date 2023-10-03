@@ -249,6 +249,10 @@ public class DialogContent extends Parent {
                 return this.chooseFileButton;
             case "sendButton" :
                 return this.sendButton;
+            case "passwordInput" :
+                return this.passwordInput;
+            case "logInButton" :
+                return this.logInButton;
 
 
         }
